@@ -23,7 +23,7 @@ if [ $? -eq 1 ]; then
     exit 1
 fi
 
-git pull origin master
+# git pull origin master
 updateVersion
 build
 
