@@ -1,15 +1,15 @@
-import { NgModule } from "@angular/core";
-import { MobxAutorunDirective } from "./directives/mobx-autorun.directive";
-import { MobxAutorunSyncDirective } from "./directives/mobx-autorun-sync.directive";
-import { MobxReactionDirective } from "./directives/mobx-reaction.directive";
+import { NgModule } from '@angular/core';
+import { MobxAutorunDirective } from './directives/mobx-autorun.directive';
+import { MobxAutorunSyncDirective } from './directives/mobx-autorun-sync.directive';
+import { MobxReactionDirective } from './directives/mobx-reaction.directive';
 import {
   action as mobxAction,
   IObservableFactory,
   IObservableFactories,
   IEnhancer
-} from "mobx";
-import { computed as mobxComputed } from "mobx";
-import { observable as mobxObservable } from "mobx";
+} from 'mobx';
+import { computed as mobxComputed } from 'mobx';
+import { observable as mobxObservable } from 'mobx';
 
 export {
   MobxAutorunDirective,
@@ -49,6 +49,7 @@ export const computed: typeof mobxComputed = Object.assign(
 function observableInternal(...args) {
   return (mobxObservable as any)(...args);
 }
+
 export const observable: typeof mobxObservable = Object.assign(
   observableInternal,
   mobxObservable
